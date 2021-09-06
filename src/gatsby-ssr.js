@@ -24,6 +24,8 @@ export const onRenderBody = ({ setPostBodyComponents }, pluginOptions) => {
                     var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
                     g.src="${pluginOptions.baseUrl}/packs/js/sdk.js";
                     s.parentNode.insertBefore(g,s);
+                    g.async = true;
+                    g.defer = true;
                     g.onload=function(){
                     	window.chatwootSDK.run({
                     	websiteToken: "${pluginOptions.websiteToken}",
